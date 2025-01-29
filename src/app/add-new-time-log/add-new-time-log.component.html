@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center mb-4">Add New Time Log</h2>
+    <form>
+      <!-- Project Name -->
+       <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="projectName" class="form-label">Project Name</label>
+            <input type="text" class="form-control" id="projectName" placeholder="Enter project name" required>
+        </div>
+
+         <!-- Time Spent -->
+         <div class="mb-3 col-md-4">
+            <label for="timeSpent" class="form-label">Time Spent (in hours)</label>
+            <input type="number" class="form-control" id="timeSpent" placeholder="Enter hours spent" min="0" step="0.1" required>
+        </div> 
+        
+        <div class="mb-3 col-md-4">
+            <label for="logDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="logDate" required>
+        </div>
+    
+        <!-- Time Log Details -->
+        <div class="mb-3">
+            <label for="details" class="form-label">Details</label>
+            <textarea class="form-control" id="details" rows="4" placeholder="Describe the work done..." required></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="justify-content-between">
+            <button type="submit" class="btn btn-primary mx-1">Save</button>
+            <button type="button" class="btn btn-success mx-1">Update</button>
+            <button type="reset" class="btn btn-secondary mx-1">Reset</button>
+        </div>
+    </div>
+    </form>
+  </div>

@@ -1,0 +1,52 @@
+<div class="container mt-4">
+    <h2 class="mb-3">Details</h2>
+
+    <!-- Filters Section -->
+    <div class="row mb-3">
+        <!-- Project Name Filter -->
+        <div class="col-md-3">
+            <label for="filterProjectName" class="form-label">Filter by Project Name:</label>
+            <input type="text" id="filterProjectName" class="form-control" placeholder="Enter project name">
+        </div>
+
+        <!-- Date Filter -->
+        <div class="col-md-2">
+            <label for="filterDate" class="form-label">Filter by Date:</label>
+            <input type="date" id="filterDate" class="form-control">
+        </div>
+    </div>
+<hr>
+    <!-- Table Section -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>Project Name</th>
+                    <th>Date</th>
+                    <th>Spent Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="projectTableBody">
+                <tr>
+                    <td>Project A</td>
+                    <td>2025-01-24</td>
+                    <td>5 hours</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary me-2">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project B</td>
+                    <td>2025-01-23</td>
+                    <td>3 hours</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary me-2">Edit</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

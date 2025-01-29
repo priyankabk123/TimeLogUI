@@ -1,0 +1,50 @@
+<div class="container">
+    <h4 class="text-center mb-4">Role Master</h4>
+    <form>
+      <!-- Project Name -->
+       <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="rolename" class="form-label">Role Name</label>
+            <input type="text" class="form-control" id="rolename" name="rolename" [(ngModel)]="rolename" placeholder="Enter Name" required>
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="col-md-4 mt-4">
+            <div class="justify-content-between">
+                <button type="submit" class="btn btn-primary mx-1" (click)="insertRole()">Save</button>
+                <button type="button" class="btn btn-success mx-1" (click)="updateRole()">Update</button>
+                <button type="reset" class="btn btn-secondary mx-1">Reset</button>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <!--- Display Data-->
+    <hr>
+    <div class="container">
+      
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Role Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let role of roles">
+              <td>
+                {{ role.role_name }}
+              </td>
+             
+              <td>
+                <button class="btn btn-primary mx-1" (click)="editRole(role)">Edit</button>
+                <button class="btn btn-danger mx-1" (click)="deleteRole(role.role_id)">Delete</button>
+               </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+
+  </div>

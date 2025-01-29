@@ -1,0 +1,40 @@
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="row w-100">
+    <div class="col-md-6 col-lg-4"></div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <!-- Logo and Project Name -->
+          <div class="text-center mb-4">
+            <img src="assets/Images/logo.png" alt="Logo" class="img-fluid mb-3" />
+          </div>
+
+          <!-- Login Form -->
+          <form (ngSubmit)="login()">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" name="username" [(ngModel)]="username" class="form-control" placeholder="Enter your username" required />
+            </div>
+          
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Enter your password" required />
+            </div>
+          
+            <div class="d-flex justify-content-between mb-3">
+              <a href="#" class="text-decoration-none small">Forgot Password?</a>
+              <a href="signup.html" class="text-decoration-none small">Sign Up</a>
+            </div>
+          
+            <button type="submit" class="btn btn-primary w-100 mb-2">Sign In</button>
+          </form>            
+
+          <p *ngIf="errorMessage" class="text-danger mt-3 text-center">{{ errorMessage }}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
