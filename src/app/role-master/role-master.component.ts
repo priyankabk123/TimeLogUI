@@ -102,8 +102,9 @@ deleteRole(roleId: number): void {
       return;
     }
 
+
     const paylaod ={ role_id : this.editRoleID, role_name: this.rolename}
-    console.log("---Update Request : "+  paylaod);
+    console.log("------Update Request : "+  paylaod);
     this.roleService.updateRole(paylaod).subscribe({
       next: (response) =>{
         if(response.roleId != null){
